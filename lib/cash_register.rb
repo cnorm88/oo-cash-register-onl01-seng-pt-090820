@@ -10,10 +10,10 @@ class CashRegister
 	end
 
 	def add_item(item, price, count=1)
-		count.times {self.items << item}
-		count.times {self.total += price}
 		self.old_items = self.items
-		self.old_total = self.total
+	  self.old_total = self.total
+	  count.times {self.items << item}
+		count.times {self.total += price}
 	end
 
 	def apply_discount
